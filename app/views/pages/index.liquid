@@ -4,15 +4,15 @@
 
 <!-- list of items -->
 <ul>
-  {% for item in items.records.results %}
+
     <li>
       {{ item.title }}
-      <form action="/item/delete" method="post">
-        <input type="hidden" name="id" value="{{ item.id }}">
+      <form action="" method="post">
+
         <button type="submit">Mark as done</button>
       </form>
     </li>
-  {% endfor %}
+
 </ul>
 
 <!-- information shown when the list is empty -->
@@ -21,10 +21,7 @@
 {% endif %}
 
 <!-- form for adding new item -->
-<form action="/item/create" method="post">
+<form action="" method="post">
   <input type="text" name="title">
   <button type="submit">Add item</button>
 </form>
-
-<!-- link to the About Me page -->
-<a href="/about">About Me</a>
